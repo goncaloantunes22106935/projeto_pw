@@ -1,0 +1,405 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing:border-box;
+  font-family: sans-serif;
+}
+
+header {
+  height: 11vh;
+  background-image: url("../images/header.da7d4808d61d.gif");
+  background-position: center;
+  color: white;
+  top: 0;
+
+  /* alinhando logo e menu */
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: sticky;
+}
+
+header div {
+  font-size: 2em;
+  padding: 1em;
+}
+
+header nav {
+  display:flex;
+  justify-contents: flex-end;
+}
+
+
+nav a {
+  padding: 0 1em;
+  text-decoration: none;
+  font-size: 1rem;
+  color: lightgray;
+}
+
+
+body{
+  background : url("../images/wallpaper.fbc01f502bb2.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+
+footer {
+  position: fixed;
+  padding: 10px 10px 0px 10px;
+  bottom: 0;
+  width: 100%;
+  /* Height of the footer*/
+  height: 40px;
+  color: white;
+  background: url("../images/wallpaper.fbc01f502bb2.png");
+  background-position: bottom;
+}
+
+
+.nome{
+  display: flex;
+  border-radius: 30px;
+  background-color: rgba(255,255,255,.3);
+  height: 9vh;
+  align-items: center;
+}
+
+
+.ano-curricular{
+  justify-content: space-around;
+  padding: 30px;
+  background-color: rgba(255,255,255,.35);
+  border-radius: 20px;
+}
+
+
+.cadeira-css{
+  background-color: rgba(255,255,255,.5);
+  padding: 10px;
+  border-radius: 15px;
+}
+
+
+.opcoes-licenciatura{
+  display: flex;
+  align-items: center;
+  height: 55vh;
+  background-color: rgba(255,255,255,.5);
+  border-radius: 15px;
+}
+
+.opcoes-licenciatura:first-child{
+  left: 10px;
+}
+
+.eu-foto{
+  border-radius: 10px;
+  margin-left: 10px;
+}
+
+.minhas-infos{
+  margin-left: 15px;
+  font-size: large;
+}
+
+.minhas-infos p{
+  margin-bottom: 4px;
+}
+
+.lista-de-competencias{
+  margin-left: 35px;
+}
+
+
+.hero-image{
+  background-image: url("../images/hero.ccea58808714.gif");
+  height: 85vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+
+}
+
+.hero-image article{
+  background-color: rgba(255,255,255,.5);
+  border-radius: 12px;
+  text-align: center;
+  max-width: 1200px;
+}
+
+
+.pagina-principal{
+  flex-flow: row wrap;
+  justify-content: space-around;
+  padding: 50px;
+}
+
+
+.menu-home{
+  display: flex;
+  justify-content: space-around;
+  background-color: rgba(255,255,255,.4);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.menu-home-2{
+  display: flex;
+  justify-content: space-around;
+  background-color: rgba(255,255,255,.4);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.menu-home > div{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 20px;
+  box-shadow: 5px 5px 15px darkgrey;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: rgba(0,0,0,.4);
+  height: 90px;
+  width: 300px;
+  margin-left: 40px;
+}
+
+.menu-home-2 > div{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 20px;
+  box-shadow: 5px 5px 15px darkgrey;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: rgba(0,0,0,.4);
+  height: 90px;
+  width: 300px;
+  margin-left: 40px;
+}
+
+
+.about-me-extra{
+  display: flex;
+  justify-content: space-around;
+  background-color: rgba(255,255,255,.3);
+  border-radius: 10px;
+}
+
+.about-me-extra > div > p {
+  color: white;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-left: 40px;
+}
+
+.about-me-extra > div > div{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 20px;
+  box-shadow: 5px 5px 15px dimgrey;
+  margin-top: 30px;
+  background-color: rgba(0,0,0,.3);
+  height: 100px;
+  width: 300px;
+  margin-left: 40px;
+}
+
+
+.voltar{
+  text-decoration: none;
+  color: white;
+  font-size: xx-large;
+}
+
+.voltar-botao{
+  background-color: rgba(255,255,255,.5);
+  padding: 10px;
+  border-radius: 15px;
+  width: 150px;
+}
+
+
+.escola-secundaria{
+  display: flex;
+  padding: 30px;
+  background-color: rgba(255,255,255,.5);
+  border-radius: 20px;
+}
+
+
+.info-da-escola{
+  padding: 10px;
+  border-radius: 15px;
+  margin-left: 25px;
+  font-size: x-large;
+}
+
+
+.projetos{
+  display: flex;
+  padding: 30px;
+  background-color: rgba(255,255,255,.5);
+  border-radius: 20px;
+}
+
+.texto-projeto{
+  padding: 10px;
+  border-radius: 15px;
+  margin-left: 25px;
+  font-size: x-large;
+}
+
+h1{
+  color: white;
+  font-size: xxx-large;
+}
+
+.h1-div{
+  background-color: rgba(255,255,255,.2);
+  height: 10vh;
+  display: flex;
+  justify-content: space-around;
+}
+
+.h1-div > h1{
+  margin-top: 15px;
+}
+
+
+.login-insert{
+  display: flex;
+  justify-content: center;
+}
+
+
+.nova-publicacao{
+  text-decoration: none;
+  color: white;
+  background-color: rgba(255,255,255,.6);
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  margin-left: 30px;
+}
+
+.nova-publicacao:hover{
+  color: black;
+}
+
+
+.cancelar{
+  text-decoration: none;
+  color: white;
+  background-color: rgba(255,255,255,.6);
+  padding-left: 160px;
+  padding-right: 160px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.cancelar:hover{
+  color: red;
+}
+
+
+.apagar{
+  text-decoration: none;
+  color: white;
+  background-color: rgba(255,255,255,.6);
+  padding-left: 70px;
+  padding-right: 70px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin:10px;
+}
+
+.apagar:hover{
+  color: red;
+}
+
+
+.link{
+  text-decoration: none;
+  color: black;
+  background-color: rgba(255,255,255,.6);
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin-top:10px;
+  margin-left: 5px;
+}
+
+.link:hover{
+  color: purple;
+}
+
+
+.editar-publicacao{
+  display: flex;
+  justify-content: center;
+}
+
+.editar-publicacao > a{
+  text-decoration: none;
+  color: black;
+  background-color: rgba(255,255,255,.6);
+  padding-left: 150px;
+  padding-right: 150px;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  margin-top:10px;
+  margin-left: 5px;
+  margin-bottom: 10px;
+}
+
+.editar-publicacao > a:hover{
+  color: blue;
+}
+
+legend{
+  background-color: black;
+  color: white;
+  padding-bottom: 4px;
+  padding-top: 4px;
+  padding-right: 6px;
+  padding-left: 6px;
+  margin-bottom: 15px;
+  border-radius: 3px;
+}
+
+fieldset > label{
+  margin-left: 10px;
+}
+
+fieldset > p{
+  margin-left: 10px;
+}
+
+fieldset > input{
+  margin-left: 10px;
+}
+
+
+.blog-fundo{
+  justify-content: space-around;
+  padding: 30px;
+  background-color: rgba(255,255,255,.35);
+}

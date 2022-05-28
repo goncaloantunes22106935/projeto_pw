@@ -1,0 +1,49 @@
+<!-- home.html -->
+
+{% extends 'portfolio/layout.html' %}
+
+{% block main %}
+    <div class="hero-image">
+            <article>
+                Olá! O meu nome é <b>Gonçalo Antunes</b> e este é o meu portfólio digital!<br><br>
+                Sou estudante do segundo ano no curso de Engenharia Informática e adoro<br> a minha área!
+                Quando escolhi este curso não sabia bem o que queria fazer algum dia mas pareceu-me uma boa ideia
+                de curso e até agora estou a adorar!<br>
+                Quando acabar a licenciatura gostava de trabalhar na área da ciber-segurança, pois é uma área que me
+                parece bastante interessante.<br><br>
+                Nos meus tempos livres gosto de assistir a jogos de basketball da NBA e conteúdo bastante focado
+                no mesmo. É provavelmente o tipo de conteúdo em que mais me foco atualmente. Gosto também de ir jogar
+                com amigos ao fim de semana.
+            </article>
+    </div>
+
+    <div class="pagina-principal">
+        <br><br>
+        <h2 style="color: white">Alguns exemplos do que poderá encontrar neste portfólio digital:</h2>
+        <br>
+
+        <div class="menu-home">
+            <div>
+                <h2 class="home-page"><a href="{% url 'portfolio:apresentacao' %}" style="text-decoration: none; color: white;">
+                    SOBRE MIM</a></h2>
+            </div>
+
+            <div>
+                <h2 class="home-page"><a href="{% url 'portfolio:projetos' %}" style="text-decoration: none; color: white;">
+                    PROJETOS</a></h2>
+            </div>
+        </div>
+
+        <div class="menu-home-2">
+            <div>
+                <h2 class="home-page"><a href="{% url 'portfolio:blog' %}" style="text-decoration: none; color: white;">
+                    BLOG</a></h2>
+            </div>
+
+            <div>
+                <h2 class="home-page"><a href="{% url 'portfolio:quiz' %}" style="text-decoration: none; color: white;">
+                    QUIZ</a></h2>
+            </div>
+        </div>
+    </div>
+{% endblock %}

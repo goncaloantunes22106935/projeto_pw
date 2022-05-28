@@ -1,0 +1,117 @@
+{% extends 'portfolio/layout.html' %}
+
+{% block main %}
+    <div class="h1-div">
+        <h1>ESCOLAS</h1>
+    </div>
+    <br><br>
+
+    <div class="escola-secundaria">
+        <div>
+            <h2>ESCOLA BÁSICA DE OURESSA</h2>
+            <br>
+            <img src="../../static/portfolio/images/ouressa.jpg">
+            <p>Escola Básica de Ouressa</p>
+        </div>
+
+        <div class="info-da-escola">
+            {% for escola in escolas %}
+                {% if escola.grau_de_ensino == 1 %}
+                    <p><b>Nome:</b> {{ escola.nome_da_escola }}</p>
+                    <p><b>Local:</b> {{ escola.local_da_escola }}</p>
+                    <p><b>Quantos anos frequentei:</b> {{ escola.quantos_anos_estive }}</p>
+                    <p><b>Logotipo da escola:</b></p>
+                    {% load static %}
+                    <img src="../../db-images/images/{{escola.logotipo_da_escola}}" height="150px">
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+    <br><br>
+
+
+    <div class="escola-secundaria">
+        <div>
+            <div>
+                <h2>ESCOLA BÁSICA 2,3 FERREIRA DE CASTRO</h2>
+                <br>
+                <img src="../../static/portfolio/images/ferreira.jpg">
+                <p>Escola Básica 2,3 Ferreira de Castro</p>
+            </div>
+        </div>
+
+        <div class="info-da-escola">
+            {% for escola in escolas %}
+                {% if escola.grau_de_ensino == 2 %}
+                    <p><b>Nome:</b> {{ escola.nome_da_escola }}</p>
+                    <p><b>Local:</b> {{ escola.local_da_escola }}</p>
+                    <p><b>Quantos anos frequentei:</b> {{ escola.quantos_anos_estive }}</p>
+                    <p><b>Logotipo da escola:</b></p>
+                    {% load static %}
+                    <img src="../../db-images/images/{{escola.logotipo_da_escola}}" height="150px">
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+    <br><br>
+
+
+    <div class="escola-secundaria">
+        <div>
+            <div>
+                <h2>ESCOLA SECUNDÁRIA DE MEM MARTINS</h2>
+                <br>
+                <img src="../../static/portfolio/images/escola_secundaria.jpg">
+                <p>Escola Secundária de Mem Martins</p>
+            </div>
+        </div>
+
+        <div class="info-da-escola">
+            {% for escola in escolas %}
+                {% if escola.grau_de_ensino == 3 %}
+                    <p><b>Nome:</b> {{ escola.nome_da_escola }}</p>
+                    <p><b>Local:</b> {{ escola.local_da_escola }}</p>
+                    <p><b>Quantos anos frequentei:</b> {{ escola.quantos_anos_estive }}</p>
+                    <p><b>Curso em que estive:</b> {{ escola.curso_frequentado }} </p>
+                    <p><b>Logotipo da escola:</b></p>
+                    {% load static %}
+                    <img src="../../db-images/images/{{escola.logotipo_da_escola}}" height="150px">
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+    <br><br>
+
+
+    <div class="escola-secundaria">
+        <div>
+            <div>
+                <h2>UNIVERSIDADE LUSÓFONA DE<br>HUMANIDADES E TECNOLOGIAS</h2>
+                <br>
+                <img src="../../static/portfolio/images/lusofona.jpg" width="490px">
+                <p>Universidade Lusófona de Humanidades e Tecnologias</p>
+            </div>
+        </div>
+
+        <div class="info-da-escola">
+            {% for escola in escolas %}
+                {% if escola.grau_de_ensino == 4 %}
+                    <p><b>Nome:</b> {{ escola.nome_da_escola }}</p>
+                    <p><b>Local:</b> {{ escola.local_da_escola }}</p>
+                    <p><b>Há quantos anos frequento:</b> {{ escola.quantos_anos_estive }}</p>
+                    <p><b>Curso em que estou:</b> {{ escola.curso_frequentado }} </p>
+                    <p><b>Logotipo da escola:</b></p>
+                    {% load static %}
+                    <img src="../../db-images/images/{{escola.logotipo_da_escola}}" height="150px">
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+
+
+    <br><br><br><br>
+    <div class="voltar-botao">
+        <a class="voltar" href="{% url 'portfolio:apresentacao' %}"><b>VOLTAR</b></a>
+    </div>
+    <br><br><br><br>
+{% endblock %}

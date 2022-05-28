@@ -1,0 +1,42 @@
+{% extends 'portfolio/layout.html' %}
+
+{% block main %}
+    <div class="h1-div">
+        <h1>PROJETOS</h1>
+    </div>
+    <br><br><br>
+
+    {% for projeto in projetos %}
+        <div class="projetos">
+            <div class="imagem-projeto">
+                <h2>{{ projeto.nome_do_projeto }}</h2>
+                <br>
+                {% if projeto.nome_do_projeto == "DEISI Great Game" %}
+                    <img src="../../static/portfolio/images/deisi_great_game.png">
+                {% elif projeto.nome_do_projeto == "Jogo de Xadrez" %}
+                    <img src="../../static/portfolio/images/chess.png">
+                {% elif projeto.nome_do_projeto == "Minesweeper" %}
+                    <img src="../../static/portfolio/images/minesweeper.png">
+                {% elif projeto.nome_do_projeto == "O meu Portfólio Digital" %}
+                    <img src="../../static/portfolio/images/site.png">
+                {% elif projeto.nome_do_projeto == "Redes de Computadores" %}
+                    <img src="../../static/portfolio/images/redes.png">
+                {% endif %}
+            </div>
+
+            <div class="texto-projeto">
+                <br>
+                <p><b>Nome do Projeto:</b> {{ projeto.nome_do_projeto }}</p>
+                <p><b>Ano da Realização do Projeto:</b> {{ projeto.ano_de_realizacao_do_projeto }}</p>
+                <p><b>Cadeira onde o Projeto foi Realizado:</b> {{ projeto.cadeira_do_projeto }}</p>
+                <p><b>Link no Github:</b> <a href="{{ projeto.link_do_github }}" style="text-decoration: none;">GitHub</a></p>
+                <p><b>Link no YouTube:</b> <a href="{{ projeto.link_do_youtube }}" style="text-decoration: none;">YouTube</a></p>
+                <p><b>Tecnologias Utilizadas:</b> {{ projeto.tecnologias_usadas }}</p>
+                <p><b>Aptidão Utilizada:</b> {{ projeto.aptidao_utilizada }}</p>
+                <p><b>Curta Descrição do Projeto:</b> {{ projeto.descricao_do_projeto }}</p>
+            </div>
+        </div>
+        <br><br>
+    {% endfor %}
+    <br><br>
+{% endblock %}

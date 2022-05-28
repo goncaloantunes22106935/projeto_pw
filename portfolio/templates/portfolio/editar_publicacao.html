@@ -1,0 +1,27 @@
+{% extends 'portfolio/layout.html' %}
+
+{% block main %}
+    <div class="h1-div">
+        <h1>EDITAR PUBLICAÇÃO</h1>
+    </div>
+    <br><br><br><br><br><br>
+
+    <div class="login-insert">
+        <div class="nova-publicacao">
+            <form action="{% url 'portfolio:editarpublicacao' publicacao_id %}" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <br>
+        <input type="submit" value="GUARDAR" class="" >
+    </form>
+        </div>
+    </form>
+    </div>
+
+    <br>
+    <div class="login-insert">
+        <a href="{% url 'portfolio:apagarpublicacao' publicacao_id %}"class="apagar">APAGAR</a>
+        <a href="{% url 'portfolio:blog' %}" class="apagar">CANCELAR</a>
+    </div>
+
+{% endblock %}

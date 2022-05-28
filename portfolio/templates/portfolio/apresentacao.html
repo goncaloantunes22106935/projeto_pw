@@ -1,0 +1,62 @@
+<!-- home.html -->
+
+{% extends 'portfolio/layout.html' %}
+
+{% block main %}
+	<div class="h1-div">
+        <h1>APRESENTAÇÃO</h1>
+    </div>
+    <br><br>
+    <div class="opcoes-licenciatura">
+        <div>
+            {% load static %}
+            <img class="eu-foto" src="{% static 'portfolio/images/eu.jpg' %}" >
+        </div>
+
+            <div class="minhas-infos">
+            <p><b>Nome:</b> Gonçalo Filipe Nunes Antunes</p>
+            <p><b>Data de Nascimento:</b> 15/10/2002</p>
+            <p><b>Nacionalidade:</b> Portuguesa</p>
+            <p><b>Contacto (email):</b> goncalonantunes15@gmail.com</p>
+            <p><b>Github:</b> <a href="https://github.com/goncaloantunes22106935" style="text-decoration: none;" target="_blank">
+                goncaloantunes22106935</a></p>
+            <p><b>Atualmente a estudar em:</b> <a href="https://www.ulusofona.pt/licenciaturas/engenharia-informatica" style="text-decoration: none;" target="_blank">
+                Universidade Lusófona de Humanidades e Tecnologias</a></p>
+            <p><b>Aptidões e Competências:</b>
+                <ul class="lista-de-competencias">
+                    <li>Pontual</li>
+                    <li>Adaptável</li>
+                    <li>Perfecionista</li>
+                    <li>Organizado</li>
+                    <li>Comunicativo</li>
+                </ul>
+            </p><br>
+
+            <p><b>Hobbies:</b> Pratico boxe há 10 anos, duas vezes por semana. É um ótimo passatempo para descarregar todas
+            as más energias e preocupações do dia-a-dia. Nos meus tempos livres gosto também de jogar video-jogos.</p><br>
+            <p><b>Interesses:</b> Gosto bastante de assistir desportos. Atualmente o que mais acompanho é basketball na
+            NBA, e sou fã dos Boston Celtics. Diria até que grande parte do conteúdo que assisto atualmente está
+            relacionado a basketball.</p>
+        </div>
+    </div>
+
+    <br><br><br>
+    <h2 style="color: white">Informações Adicionais</h2>
+    <br>
+    <div class="about-me-extra">
+        <div>
+            <div>
+            <h2 class="home-page"><a href="{% url 'portfolio:licenciatura' %}" style="text-decoration: none; color: white">LICENCIATURA</a></h2>
+            </div>
+            <p>Informações sobre as minhas cadeiras</p>
+        </div>
+
+        <div>
+            <div>
+            <h2 class="home-page"><a href="{% url 'portfolio:escolas' %}" style="text-decoration: none; color: white">ESCOLAS</a></h2>
+            </div>
+            <p>Escolas onde estive</p>
+        </div>
+    </div>
+    <br><br><br><br>
+{% endblock %}

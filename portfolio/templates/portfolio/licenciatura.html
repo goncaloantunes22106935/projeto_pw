@@ -1,0 +1,116 @@
+<!-- home.html -->
+
+{% extends 'portfolio/layout.html' %}
+
+{% block main %}
+	<div class="h1-div">
+        <h1>LICENCIATURA</h1>
+    </div>
+    <br><br>
+
+    <div class="ano-curricular">
+        <h2>PRIMEIRO ANO</h2>
+        <br>
+        {% for cadeira in cadeiras %}
+            {% if cadeira.ano_da_cadeira == 1 %}
+                <div class="cadeira-css">
+                    <h3>{{ cadeira.nome_da_cadeira }}</h3>
+                    <p><b>Professor:</b> {{ cadeira.professor }}</p>
+                    <p><b>Ano:</b> {{ cadeira.ano_da_cadeira }}º</p>
+                    <p><b>Semestre:</b> {{ cadeira.semestre_da_cadeira }}º</p>
+                    <p><b>ECTS:</b> {{ cadeira.ects }}</p>
+                    <p><b>Link da Página:</b> <a href="{{ cadeira.link_da_pagina }}" target="_blank">{{ cadeira.link_da_pagina }}</a></p>
+                    {% if cadeira.estrelas_da_cadeira == 1 %}
+                        <p><b>Avaliação da cadeira:</b> ⭐</p>
+                    {% elif cadeira.estrelas_da_cadeira == 2 %}
+                        <p><b>Avaliação da cadeira:</b> ⭐⭐</p>
+                    {% elif cadeira.estrelas_da_cadeira == 3 %}
+                        <p><b>Avaliação da cadeira:</b> ⭐⭐⭐</p>
+                    {% elif cadeira.estrelas_da_cadeira == 4 %}
+                        <p><b>Avaliação da cadeira:</b> ⭐⭐⭐⭐</p>
+                    {% elif cadeira.estrelas_da_cadeira == 5 %}
+                        <p><b>Avaliação da cadeira:</b> ⭐⭐⭐⭐⭐</p>
+                    {% endif %}
+                </div>
+                <br>
+            {% endif %}
+        {% endfor %}
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <div class="ano-curricular">
+        <h2 class="titulos-cadeiras">SEGUNDO ANO</h2>
+        <br>
+        {% for cadeira in cadeiras %}
+            {% if cadeira.ano_da_cadeira == 2 %}
+                <div class="cadeira-css">
+                    <h3>{{ cadeira.nome_da_cadeira }}</h3>
+                    <p><b>Professor:</b> {{ cadeira.professor }}</p>
+                    <p><b>Ano:</b> {{ cadeira.ano_da_cadeira }}º</p>
+                    <p><b>Semestre:</b> {{ cadeira.semestre_da_cadeira }}º</p>
+                    <p><b>ECTS:</b> {{ cadeira.ects }}</p>
+                    <p><b>Link da Página:</b> <a href="{{ cadeira.link_da_pagina }}" target="_blank">{{ cadeira.link_da_pagina }}</a></p>
+                    {% if cadeira.estrelas_da_cadeira == 1 %}
+                        <p><b>Avaliação da cadeira:</b> ⭐</p>
+                    {% elif cadeira.estrelas_da_cadeira == 2 %}
+                        <p><b>Avaliação da cadeira:</b> ⭐⭐</p>
+                    {% elif cadeira.estrelas_da_cadeira == 3 %}
+                        <p><b>Avaliação da cadeira:</b> ⭐⭐⭐</p>
+                    {% elif cadeira.estrelas_da_cadeira == 4 %}
+                        <p><b>Avaliação da cadeira:</b> ⭐⭐⭐⭐</p>
+                    {% elif cadeira.estrelas_da_cadeira == 5 %}
+                        <p><b>Avaliação da cadeira:</b> ⭐⭐⭐⭐⭐</p>
+                    {% endif %}
+                </div>
+                <br>
+            {% endif %}
+        {% endfor %}
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <div class="ano-curricular">
+        <h2 class="titulos-cadeiras">TERCEIRO ANO</h2>
+        <br>
+        {% for cadeira in cadeiras %}
+            {% if cadeira.ano_da_cadeira == 3 %}
+                <div class="cadeira-css">
+                    <h3>{{ cadeira.nome_da_cadeira }}</h3>
+                    <p><b>Professor:</b> {{ cadeira.professor }}</p>
+                    <p><b>Ano:</b> {{ cadeira.ano_da_cadeira }}º</p>
+                    <p><b>Semestre:</b> {{ cadeira.semestre_da_cadeira }}º</p>
+                    <p><b>ECTS:</b> {{ cadeira.ects }}</p>
+                    <p><b>Link da Página:</b> <a href="{{ cadeira.link_da_pagina }}" target="_blank">{{ cadeira.link_da_pagina }}</a></p>
+                    {% if cadeira.estrelas_da_cadeira == 1 %}
+                        <p><b>Avaliação da cadeira:</b> ⭐</p>
+                    {% elif cadeira.estrelas_da_cadeira == 2 %}
+                        <p><b>Avaliação da cadeira:</b> ⭐⭐</p>
+                    {% elif cadeira.estrelas_da_cadeira == 3 %}
+                        <p><b>Avaliação da cadeira:</b> ⭐⭐⭐</p>
+                    {% elif cadeira.estrelas_da_cadeira == 4 %}
+                        <p><b>Avaliação da cadeira:</b> ⭐⭐⭐⭐</p>
+                    {% elif cadeira.estrelas_da_cadeira == 5 %}
+                        <p><b>Avaliação da cadeira:</b> ⭐⭐⭐⭐⭐</p>
+                    {% endif %}
+                </div>
+                <br>
+            {% endif %}
+        {% endfor %}
+    </div>
+
+
+    <br><br><br><br>
+    <div class="voltar-botao">
+        <a class="voltar" href="{% url 'portfolio:apresentacao' %}"><b>VOLTAR</b></a>
+    </div>
+    <br><br><br><br>
+{% endblock %}
