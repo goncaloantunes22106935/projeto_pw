@@ -52,7 +52,6 @@ class Projeto(models.Model):
     id = models.BigAutoField(primary_key=True)
     nome_do_projeto = models.CharField(max_length=50)
     descricao_do_projeto = models.CharField(max_length=500)
-    imagem_do_projeto = models.ImageField(upload_to='db-images/images')
     ano_de_realizacao_do_projeto = models.IntegerField(default=2022)
     cadeira_do_projeto = models.ForeignKey(Cadeira, on_delete=models.CASCADE)
     link_do_github = models.CharField(max_length=100, default="https://github.com/goncaloantunes22106935")
@@ -69,7 +68,6 @@ class Escola(models.Model):
     nome_da_escola = models.CharField(max_length=150)
     curso_frequentado = models.CharField(max_length=50, blank=True)
     local_da_escola = models.CharField(max_length=50)
-    logotipo_da_escola = models.ImageField(upload_to='db-images/images')
     quantos_anos_estive = models.IntegerField(default=1)
     grau_de_ensino = models.IntegerField(default=0)
 
@@ -84,7 +82,6 @@ class Publicacao(models.Model):
     titulo_da_publicacao = models.CharField(max_length=50)
     descricao = models.CharField(max_length=700)
     link_do_github = models.CharField(max_length=150, blank=True)
-    foto_da_publicacao = models.ImageField(upload_to='db-images/images', null=True, blank=True)
 
     def __str__(self):
         return self.titulo_da_publicacao
