@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "82242a3826488833cf4edbadb53e65af5beebb23e4d4e9278a1c7a56f86efe30"
+            "sha256": "4532a738ac9e261088d9b44db8ec8281eb0e9deb7aed24887c48fe0890cb31e5"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -62,18 +62,18 @@
         },
         "django": {
             "hashes": [
-                "sha256:07c8638e7a7f548dc0acaaa7825d84b7bd42b10e8d22268b3d572946f1e9b687",
-                "sha256:4e8177858524417563cc0430f29ea249946d831eacb0068a1455686587df40b5"
+                "sha256:502ae42b6ab1b612c933fb50d5ff850facf858a4c212f76946ecd8ea5b3bf2d9",
+                "sha256:f7431a5de7277966f3785557c3928433347d998c1e6459324501378a291e5aab"
             ],
             "index": "pypi",
-            "version": "==4.0.4"
+            "version": "==4.0.5"
         },
         "django-cache-url": {
             "hashes": [
-                "sha256:4559398a946ff24c4ee96e32c55e3b760bd69f7c2ba48844cdf8fcb4f76d10bd",
-                "sha256:9061f8e7ffbb29eb92ba93fa9058003ec92393e85c537d1969570652ff8721fa"
+                "sha256:6cc9901a99a99751f5458aa7de08ce06e48c1441b1a94c9457d78af74fab9a26",
+                "sha256:c4a62634cffc9d636073cef597a44576d67b07660ab2ef1f02b160ee7ecf0e98"
             ],
-            "version": "==3.4.0"
+            "version": "==3.4.2"
         },
         "django-cloudinary-storage": {
             "hashes": [
@@ -92,7 +92,7 @@
                 "sha256:bf3fd6bc54fcfd7f512ddcb80a7781f0ced2b0c83dd123d619e9468ecdaaf537"
             ],
             "index": "pypi",
-            "version": "==8.0.0."
+            "version": "==8.0.0"
         },
         "gunicorn": {
             "hashes": [
@@ -112,11 +112,11 @@
         },
         "marshmallow": {
             "hashes": [
-                "sha256:2aaaab4f01ef4f5a011a21319af9fce17ab13bf28a026d1252adab0e035648d5",
-                "sha256:ff79885ed43b579782f48c251d262e062bce49c65c52412458769a4fb57ac30f"
+                "sha256:53a1e0ee69f79e1f3e80d17393b25cfc917eda52f859e8183b4af72c3390c1f1",
+                "sha256:a762c1d8b2bcb0e5c8e964850d03f9f3bffd6a12b626f3c14b9d6b1841999af5"
             ],
             "markers": "python_version >= '3.7'",
-            "version": "==3.15.0"
+            "version": "==3.16.0"
         },
         "packaging": {
             "hashes": [
