@@ -40,7 +40,7 @@ nav a {
 
 
 body{
-  background : url("../images/wallpaper.png");
+  background : url("../images/fundo.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -50,14 +50,22 @@ body{
 
 footer {
   position: fixed;
-  padding: 10px 10px 0px 10px;
+  padding: 10px;
   bottom: 0;
   width: 100%;
-  /* Height of the footer*/
   height: 40px;
   color: white;
-  background: url("../images/wallpaper.png");
+  background: url("../images/fundo.jpg");
   background-position: bottom;
+}
+
+.relogio{
+  text-align: right;
+  float: right;
+  position: fixed;
+  padding: 10px 20px 10px 10px;
+  bottom: 0;
+  width: 100%;
 }
 
 
@@ -221,17 +229,17 @@ footer {
 }
 
 
-.voltar{
+.voltar-botao{
   text-decoration: none;
   color: white;
+  background-color: rgba(255,255,255,.6);
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  margin-left: 30px;
   font-size: xx-large;
-}
-
-.voltar-botao{
-  background-color: rgba(255,255,255,.5);
-  padding: 10px;
-  border-radius: 15px;
-  width: 150px;
+  border-radius: 8px;
 }
 
 
@@ -300,6 +308,40 @@ h1{
 }
 
 .nova-publicacao:hover{
+  color: black;
+}
+
+
+.nova-publicacao-ecra{
+  text-decoration: none;
+  color: white;
+  background-color: rgba(255,255,255,.6);
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  margin-left: 30px;
+  border-radius: 5px;
+}
+
+
+.projetos-finais {
+  text-decoration: none;
+  display: flex;
+  position: center;
+  color: white;
+  background-color: rgba(255, 255, 255, .6);
+  font-size: x-large;
+  justify-content: center;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  margin-left: 250px;
+  margin-right: 250px;
+}
+
+.projetos-finais:hover{
   color: black;
 }
 
@@ -402,4 +444,15 @@ fieldset > input{
   justify-content: space-around;
   padding: 30px;
   background-color: rgba(255,255,255,.35);
+}
+
+
+.meteorologia{
+  font-size: x-large;
+  color: white;
+  text-decoration: none;
+}
+
+.meteorologia:hover{
+  color: blue;
 }

@@ -2,18 +2,17 @@
 
 {% block main %}
     <div class="h1-div">
-        <h1>NOVA PUBLICAÇÃO</h1>
+        <h1>NOVO PROJETO FINAL</h1>
     </div>
     <br><br><br><br><br><br>
 
     <div class="login-insert">
-        <div class="nova-publicacao-ecra">
+        <div class="nova-publicacao">
             <form method="POST" action="">
                 {% csrf_token %}
                 {{ form.as_p }}
                 <br>
                 <input type="submit" value="ENVIAR">
-                <p style="font-size: small"><br><b>Campos obrigatórios</b> - Autor, Título e Descrição</p>
             </form>
         </div>
     </form>
@@ -21,6 +20,6 @@
 
     <br>
     <div class="login-insert">
-        <a href="{% url 'portfolio:blog' %}" class="cancelar">CANCELAR</a>
+        <a href="{% url 'portfolio:tcf' %}" class="cancelar">CANCELAR</a>
     </div>
 {% endblock %}

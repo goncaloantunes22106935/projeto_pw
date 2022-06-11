@@ -1,0 +1,30 @@
+{% extends 'portfolio/layout.html' %}
+
+{% block main %}
+    {% load static %}
+    <script src="{% static 'portfolio/javascript/meteorologia.js' %}" defer></script>
+    <script src="{% static 'portfolio/javascript/quotes_and_proverbs.js' %}" defer></script>
+
+    <div class="h1-div">
+        <h1>API</h1>
+    </div>
+    <br><br><br><br><br><br><br><br>
+
+    <div class="login-insert">
+        <div class="nova-publicacao-ecra">
+            <a href="https://www.ipma.pt/pt/otempo/prev.localidade.hora/" class="meteorologia">
+                <b>METEOROLOGIA PARA A CIDADE DE LISBOA</b></a>
+            <br>
+            <h2>Temperatura Máxima: <span id="temperatura_maxima">00.0</span></h2>
+            <h2>Temperatura Mínima: <span id="temperatura_minima">00.0</span></h2>
+        </div>
+    </div>
+    <br><br><br><br>
+
+    <div class="login-insert">
+        <div class="nova-publicacao-ecra">
+            <h2>Random Word: <span style="color: blue" id="palavra"></span></h2>
+        </div>
+    </div>
+    <br><br><br><br>
+{% endblock %}

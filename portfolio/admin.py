@@ -7,6 +7,8 @@ from .models import Escola
 from .models import Projeto
 from .models import Publicacao
 from .models import Jogador
+from .models import Final_Project
+from .models import Quizz
 
 # Register your models here.
 
@@ -18,3 +20,5 @@ admin.site.register(Escola)
 admin.site.register(Projeto)
 admin.site.register(Publicacao)
 admin.site.register(Jogador)
+admin.site.register(Final_Project)
+admin.site.register(Quizz)

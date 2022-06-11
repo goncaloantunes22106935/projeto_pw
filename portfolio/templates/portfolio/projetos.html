@@ -6,21 +6,29 @@
     </div>
     <br><br><br>
 
+    <a href="{% url 'portfolio:tcf' %}" class="projetos-finais">PROJETOS FINAIS</a>
+    <br><br><br><br>
+
     {% for projeto in projetos %}
         <div class="projetos">
             <div class="imagem-projeto">
                 <h2>{{ projeto.nome_do_projeto }}</h2>
                 <br>
                 {% if projeto.nome_do_projeto == "DEISI Great Game" %}
-                    <img src="../../static/portfolio/images/deisi_great_game.png">
+                    {% load static %}
+                    <img src={% static "portfolio/images/deisi_great_game.png" %}>
                 {% elif projeto.nome_do_projeto == "Jogo de Xadrez" %}
-                    <img src="../../static/portfolio/images/chess.png">
+                    {% load static %}
+                    <img src={% static "portfolio/images/chess.png" %}>
                 {% elif projeto.nome_do_projeto == "Minesweeper" %}
-                    <img src="../../static/portfolio/images/minesweeper.png">
+                    {% load static %}
+                    <img src={% static "portfolio/images/minesweeper.png" %}>
                 {% elif projeto.nome_do_projeto == "O meu Portfólio Digital" %}
-                    <img src="../../static/portfolio/images/site.png">
+                    {% load static %}
+                    <img src={% static "portfolio/images/site.png" %}>
                 {% elif projeto.nome_do_projeto == "Redes de Computadores" %}
-                    <img src="../../static/portfolio/images/redes.png">
+                    {% load static %}
+                    <img src={% static "portfolio/images/redes.png" %}>
                 {% endif %}
             </div>
 

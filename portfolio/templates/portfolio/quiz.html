@@ -9,6 +9,7 @@
 
     <div class="cadeira-css">
         <form method="POST">
+            {% csrf_token %}
             <fieldset>
                 <legend class="quizz-topico">QUIZ DE PROGRAMAÇÃO WEB</legend>
 
@@ -17,9 +18,6 @@
 
                     <label for="nome">Nome</label>
                     <input type="text" id="nome" name="nome" autocomplete="on" autofocus required style="margin-bottom: 10px;"><br>
-
-                    <label for="dataNasc">Data de Nascimento:</label>
-                    <input type="date" id="dataNasc" name="dataNasc" required style="margin-bottom: 10px;"><br>
 
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" required><br><br>
@@ -33,57 +31,50 @@
 
                     <p><b>1.</b>A que curso pertence a cadeira de Programação Web?</p>
 
-                    <input type="radio" id="eletrotecnica" name="eletrotecnica" value="Engenharia Eletrotécnica">
-                    <label for="eletrotecnica">Engenharia Eletrotécnica</label>
+                    <input type="radio" id="eletrotecnica" name="curso" value="Engenharia Eletrotécnica">
+                    <label for="eletrotecnica">Engenharia Eletrotécnica</label><br>
 
-                    <input type="radio" id="marketing" name="marketing" value="Marketing e Publicidade">
-                    <label for="marketing">Marketing e Publicidade</label>
+                    <input type="radio" id="marketing" name="curso" value="Marketing e Publicidade">
+                    <label for="marketing">Marketing e Publicidade</label><br>
 
-                    <input type="radio" id="informatica" name="informatica" value="Engenharia Informática">
-                    <label for="informatica">Engenharia Informática</label>
+                    <input type="radio" id="informatica" name="curso" value="Engenharia Informática">
+                    <label for="informatica">Engenharia Informática</label><br>
 
-                    <input type="radio" id="desporto" name="desporto" value="Desporto">
-                    <label for="desporto">Desporto</label><br><br>
+                    <input type="radio" id="desporto" name="curso" value="Desporto">
+                    <label for="desporto">Desporto</label><br><br><br>
 
 
 
-                    <p><b>2.</b>Indique linguagens de Programação que se aprendem em Programação Web.</p>
+                    <p><b>2.</b>Indique qual destas Linguagens de Programação que se aprende em Programação Web.</p>
 
-                    <input type="checkbox" id="java" name="java" value="Java">
+                    <input type="radio" id="java" name="linguagens" value="Java">
                     <label for="java">Java</label><br>
 
-                    <input type="checkbox" id="javascript" name="javascript" value="Javascript">
-                    <label for="javascript">Javascript</label><br>
+                    <input type="radio" id="assembly" name="linguagens" value="Assembly">
+                    <label for="assembly">Assembly</label><br>
 
-                    <input type="checkbox" id="cplusplus" name="cplusplus" value="C++">
+                    <input type="radio" id="cplusplus" name="linguagens" value="C++">
                     <label for="cplusplus">C++</label><br>
 
-                    <input type="checkbox" id="html" name="html" value="HTML">
-                    <label for="html">HTML</label><br>
+                    <input type="radio" id="sql" name="linguagens" value="SQL">
+                    <label for="sql">SQL</label><br>
 
-                    <input type="checkbox" id="python" name="python" value="Python">
-                    <label for="python">Python</label><br>
+                    <input type="radio" id="javascript" name="linguagens" value="Python">
+                    <label for="javascript">Javascript</label><br>
 
-                    <input type="checkbox" id="kotlin" name="kotlin" value="Kotlin">
+                    <input type="radio" id="kotlin" name="linguagens" value="Kotlin">
                     <label for="kotlin">Kotlin</label><br><br>
 
-
-
-                    <label for="tags">Indique qual destas tags não pertence ao HTML:</label>
-                    <input list="tags" name="tags" id="tags">
-                    <datalist id="tags">
-                        <option value="<p>">
-                        <option value="<b>">
-                        <option value="<hr>">
-                        <option value="<bold>">
-                        <option value="<h1>">
-                        <option value="<li>">
-                    </datalist><br><br>
-
+                    {% load static %}
                     <input type="image" src="../../static/portfolio/images/file.png" alt="Submit" width="48" height="48" title="Submit"
                     style="margin-bottom: 10px; margin-left: 10px">
                 </fieldset>
             </fieldset>
         </form>
     </div>
+    <br><br><br>
+
+    {% load static %}
+    <img src="{% static 'portfolio/images/grafico.png' %}">
+    <br><br><br><br>
 {% endblock %}

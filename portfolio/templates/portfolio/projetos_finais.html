@@ -1,0 +1,40 @@
+{% extends 'portfolio/layout.html' %}
+
+{% block main %}
+    <div class="h1-div">
+        <h1>PROJETOS FINAIS</h1>
+    </div>
+
+    <br><br>
+    <a href="{% url 'portfolio:novotcf' %}" class="nova-publicacao">ADICIONAR TCF</a>
+    <br><br><br><br>
+
+    <div class="blog-fundo">
+        {% for projeto_final in projetos_finais %}
+            <div class="cadeira-css">
+                <h2>{{ projeto_final.titulo }}</h2>
+                <p><b>{{ projeto_final.autor }}</b></p>
+                <p>Realizado no ano de {{ projeto_final.ano }}</p>
+                <p><b>Orientador:</b> {{ projeto_final.orientador }}</p>
+                <br>
+                <p><b>Descrição:</b><br>{{ projeto_final.resumo }}</p>
+                <br>
+                {% if projeto_final.relatorio %}
+                    <p><b>Relatório:</b> {{ projeto_final.relatorio }}</p>
+                {% endif %}
+                <p><b>Link no Github:</b> <a href="{{ projeto_final.link_do_github }}" style="text-decoration: none;">GitHub</a></p>
+                <p><b>Link no YouTube:</b> <a href="{{ projeto_final.link_do_youtube }}" style="text-decoration: none;">YouTube</a></p>
+                <div class="editar-publicacao">
+                    {% if request.user.is_authenticated %}
+                        <a href="{% url 'portfolio:editartcf' projeto_final.id %}" class="">EDITAR</a>
+                    {% endif %}
+                </div>
+            </div>
+
+            <br><br>
+        {% endfor %}
+    </div>
+
+    <br><br><br><br>
+    <a class="voltar-botao" href="{% url 'portfolio:apresentacao' %}"><b>VOLTAR</b></a>
+{% endblock %}

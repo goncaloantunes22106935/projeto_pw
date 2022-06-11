@@ -1,6 +1,8 @@
 #  hello/views.py
 from django.shortcuts import render
 import datetime
+from matplotlib import pyplot as plt
+
 from django.contrib.auth import authenticate, login, logout
 
 from django.urls import reverse
@@ -10,11 +12,15 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render
 
 from .forms import PublicacaoForm
+from .forms import TcfForm
+from .forms import QuizzForm
 
 from .models import Cadeira
 from .models import Escola
 from .models import Projeto
 from .models import Publicacao
+from .models import Final_Project
+from .models import Quizz
 
 
 def home_page_view(request):
@@ -95,5 +101,77 @@ def logout_page_view(request):
     })
 
 
+def projetos_finais_page_view(request):
+    context = {'projetos_finais': Final_Project.objects.all()}
+    return render(request, 'portfolio/projetos_finais.html', context)
+
+
+def novo_tcf_page_view(request):
+    form = TcfForm(request.POST or None)
+    if form.is_valid():
+        form.save()
+        return HttpResponseRedirect(reverse('portfolio:tcf'))
+    context = {'form': form}
+    return render(request, 'portfolio/novo_tcf.html', context)
+
+
+def editar_tcf_page_view(request, tcf_id):
+    tcf = Final_Project.objects.get(id=tcf_id)
+    form = TcfForm(request.POST or None, instance=tcf)
+
+    if form.is_valid():
+        form.save()
+        return HttpResponseRedirect(reverse('portfolio:tcf'))
+
+    context = {'form': form, 'tcf_id': tcf_id}
+    return render(request, 'portfolio/editar_tcf.html', context)
+
+
+def apagar_tcf_page_view(request, tcf_id):
+    Final_Project.objects.get(id=tcf_id).delete()
+    return HttpResponseRedirect(reverse('portfolio:tcf'))
+
+
+def quizz_resultado(request):
+    pontuacao = 0
+    curso = request.POST.get('curso')
+    linguagens = request.POST.get('linguagens')
+
+    if curso == 'informatica':
+        pontuacao += 15
+    if linguagens == 'javascript':
+        pontuacao += 15
+
+    return pontuacao
+
+
+def grafico_desenho():
+    respostas = sorted(Quizz.objects.all(), key=lambda t: t.pontuacao, reverse=True)
+    nomes = []
+    pontuacoes = []
+
+    for concorrente in respostas:
+        nomes.append(concorrente.nome)
+        pontuacoes.append(concorrente.pontuacao)
+
+        plt.barh(nomes, pontuacoes)
+        plt.savefig("portfolio/static/portfolio/images/grafico.png", bbox_inches='tight')
+
+
 def quiz_view_page(request):
-    return render(request, 'portfolio/quiz.html')
+    quizz = Quizz.objects.all()
+    context = {'quizz': quizz}
+
+    if request.method == 'POST':
+        n = request.POST.get('nome')
+        a = request.POST.get('email')
+        p = quizz_resultado(request)
+        r = Quizz(nome=n, email=a, pontuacao=p)
+        r.save()
+        grafico_desenho()
+
+    return render(request, 'portfolio/quiz.html', context)
+
+
+def api_page_view(request):
+    return render(request, 'portfolio/api_page.html')

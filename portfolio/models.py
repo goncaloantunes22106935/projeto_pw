@@ -94,3 +94,27 @@ class Jogador(models.Model):
 
     def __str__(self):
         return self.nome_do_jogador
+
+
+class Final_Project(models.Model):
+    id = models.BigAutoField(primary_key=True)
+    autor = models.CharField(max_length=50)
+    orientador = models.ForeignKey(Professor, on_delete=models.CASCADE)
+    ano = models.IntegerField(default=2021)
+    titulo = models.CharField(max_length=50)
+    resumo = models.CharField(max_length=700)
+    relatorio = models.CharField(max_length=100, blank=True)
+    link_github = models.CharField(max_length=150, default="https://github.com/goncaloantunes22106935")
+    video_demonstrativo = models.CharField(max_length=150, default="https://www.youtube.com/")
+
+    def __str__(self):
+        return self.titulo
+
+
+class Quizz(models.Model):
+    nome = models.CharField(max_length=50)
+    email = models.CharField(max_length=50)
+    pontuacao = models.IntegerField()
+
+    def __str__(self):
+        return self.nome

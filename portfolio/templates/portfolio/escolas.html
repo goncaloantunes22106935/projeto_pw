@@ -10,7 +10,8 @@
         <div>
             <h2>ESCOLA BÁSICA DE OURESSA</h2>
             <br>
-            <img src="../../static/portfolio/images/ouressa.jpg">
+            {% load static %}
+            <img src={% static "portfolio/images/ouressa.jpg" %}>
             <p>Escola Básica de Ouressa</p>
         </div>
 
@@ -34,7 +35,8 @@
             <div>
                 <h2>ESCOLA BÁSICA 2,3 FERREIRA DE CASTRO</h2>
                 <br>
-                <img src="../../static/portfolio/images/ferreira.jpg">
+                {% load static %}
+                <img src={% static "portfolio/images/ferreira.jpg" %}>
                 <p>Escola Básica 2,3 Ferreira de Castro</p>
             </div>
         </div>
@@ -60,7 +62,8 @@
             <div>
                 <h2>ESCOLA SECUNDÁRIA DE MEM MARTINS</h2>
                 <br>
-                <img src="../../static/portfolio/images/escola_secundaria.jpg">
+                {% load static %}
+                <img src={% static "portfolio/images/escola_secundaria.jpg" %}>
                 <p>Escola Secundária de Mem Martins</p>
             </div>
         </div>
@@ -87,7 +90,8 @@
             <div>
                 <h2>UNIVERSIDADE LUSÓFONA DE<br>HUMANIDADES E TECNOLOGIAS</h2>
                 <br>
-                <img src="../../static/portfolio/images/lusofona.jpg" width="490px">
+                {% load static %}
+                <img src={% static "portfolio/images/lusofona.jpg" %} width="490px">
                 <p>Universidade Lusófona de Humanidades e Tecnologias</p>
             </div>
         </div>
@@ -109,8 +113,6 @@
 
 
     <br><br><br><br>
-    <div class="voltar-botao">
-        <a class="voltar" href="{% url 'portfolio:apresentacao' %}"><b>VOLTAR</b></a>
-    </div>
-    <br><br><br><br>
+    <a class="voltar-botao" href="{% url 'portfolio:apresentacao' %}"><b>VOLTAR</b></a>
+    <br><br><br><br><br>
 {% endblock %}

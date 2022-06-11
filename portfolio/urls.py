@@ -15,5 +15,10 @@ urlpatterns = [
     path('blog/apagar/<int:publicacao_id>', views.apagar_publicacao_page_view, name='apagarpublicacao'),
     path('login', views.login_page_view, name='login'),
     path('logout', views.logout_page_view, name='logout'),
-    path('quiz', views.quiz_view_page, name='quiz')
+    path('quiz', views.quiz_view_page, name='quiz'),
+    path('projetos/tcf', views.projetos_finais_page_view, name='tcf'),
+    path('projetos/tcf/adicionar', views.novo_tcf_page_view, name='novotcf'),
+    path('projetos/tcf/editar/<int:tcf_id>', views.editar_tcf_page_view, name='editartcf'),
+    path('projetos/tcf/apagar/<int:tcf_id>', views.apagar_tcf_page_view, name='apagartcf'),
+    path('api', views.api_page_view, name='api')
 ]
