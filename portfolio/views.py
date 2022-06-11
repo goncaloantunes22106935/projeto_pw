@@ -1,7 +1,6 @@
 #  hello/views.py
 from django.shortcuts import render
 import datetime
-from matplotlib import pyplot as plt
 
 from django.contrib.auth import authenticate, login, logout
 
@@ -145,19 +144,6 @@ def quizz_resultado(request):
     return pontuacao
 
 
-def grafico_desenho():
-    respostas = sorted(Quizz.objects.all(), key=lambda t: t.pontuacao, reverse=True)
-    nomes = []
-    pontuacoes = []
-
-    for concorrente in respostas:
-        nomes.append(concorrente.nome)
-        pontuacoes.append(concorrente.pontuacao)
-
-        plt.barh(nomes, pontuacoes)
-        plt.savefig("portfolio/static/portfolio/images/grafico.png", bbox_inches='tight')
-
-
 def quiz_view_page(request):
     quizz = Quizz.objects.all()
     context = {'quizz': quizz}
@@ -168,7 +154,6 @@ def quiz_view_page(request):
         p = quizz_resultado(request)
         r = Quizz(nome=n, email=a, pontuacao=p)
         r.save()
-        grafico_desenho()
 
     return render(request, 'portfolio/quiz.html', context)
 
