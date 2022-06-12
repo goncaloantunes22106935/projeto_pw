@@ -38,6 +38,16 @@ nav a {
   color: lightgray;
 }
 
+nav a:hover{
+  background-color: rgba(255,255,255,.6);
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 2px;
+  padding-top: 2px;
+  border-radius: 5px;
+  color: black;
+}
+
 
 body{
   background : url("../images/fundo.jpg");
@@ -71,10 +81,21 @@ footer {
 
 .nome{
   display: flex;
-  border-radius: 30px;
+  border-radius: 15px;
   background-color: rgba(255,255,255,.3);
-  height: 9vh;
   align-items: center;
+  font-size: xx-large;
+  text-decoration: none;
+  color: white;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-left: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.nome:hover{
+  color: black;
 }
 
 
@@ -125,10 +146,9 @@ footer {
 
 
 .hero-image{
-  background-image: url("../images/hero.gif");
+  background-image: url("../images/superman.png");
   height: 85vh;
   background-repeat: no-repeat;
-  background-position: center;
   background-size: cover;
   background-attachment: fixed;
   display: flex;
@@ -139,7 +159,7 @@ footer {
 }
 
 .hero-image article{
-  background-color: rgba(255,255,255,.5);
+  background-color: rgba(255,255,255,.8);
   border-radius: 12px;
   text-align: center;
   max-width: 1200px;
