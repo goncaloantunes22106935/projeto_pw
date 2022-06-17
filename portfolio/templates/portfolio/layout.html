@@ -28,6 +28,7 @@
         <a href="{% url 'portfolio:blog' %}">Blog</a>
         <a href="{% url 'portfolio:quiz' %}">Quiz</a>
         <a href="{% url 'portfolio:api' %}">API</a>
+        <a href="{% url 'portfolio:site' %}">Web</a>
         {% if request.user.is_authenticated %}
             <a href="{% url 'portfolio:logout' %}">Logout</a>
         {% else %}

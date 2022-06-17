@@ -118,3 +118,14 @@ class Quizz(models.Model):
 
     def __str__(self):
         return self.nome
+
+
+class Tecnologia(models.Model):
+    id = models.BigAutoField(primary_key=True)
+    nome = models.CharField(max_length=50)
+    criador = models.CharField(max_length=50)
+    descricao = models.CharField(max_length=700)
+    pagina = models.CharField(max_length=150)
+
+    def __str__(self):
+        return self.nome

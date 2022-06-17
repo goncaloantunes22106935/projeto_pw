@@ -20,5 +20,6 @@ urlpatterns = [
     path('projetos/tcf/adicionar', views.novo_tcf_page_view, name='novotcf'),
     path('projetos/tcf/editar/<int:tcf_id>', views.editar_tcf_page_view, name='editartcf'),
     path('projetos/tcf/apagar/<int:tcf_id>', views.apagar_tcf_page_view, name='apagartcf'),
-    path('api', views.api_page_view, name='api')
+    path('api', views.api_page_view, name='api'),
+    path('site', views.site_page_view, name='site')
 ]

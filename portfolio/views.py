@@ -20,6 +20,7 @@ from .models import Projeto
 from .models import Publicacao
 from .models import Final_Project
 from .models import Quizz
+from .models import Tecnologia
 
 
 def home_page_view(request):
@@ -160,3 +161,8 @@ def quiz_view_page(request):
 
 def api_page_view(request):
     return render(request, 'portfolio/api_page.html')
+
+
+def site_page_view(request):
+    context = {'tecnologias': Tecnologia.objects.all()}
+    return render(request, 'portfolio/Site.html', context)

@@ -1,0 +1,56 @@
+{% extends 'portfolio/layout.html' %}
+
+{% block main %}
+    <div class="h1-div">
+        <h1>DIAGRAMA DER DAS CLASSES</h1>
+    </div>
+
+    <div class="imagem-bd">
+        {% load static %}
+        <img src={% static "portfolio/images/base_de_dados.png" %}>
+    </div>
+    <div class="texto-bd">
+        <br>
+        <p>Para esta Base de Dados foram criadas 8 tabelas:</p>
+        <li>Projeto</li>
+        <li>Cadeira</li>
+        <li>Competência</li>
+        <li>Professor</li>
+        <li>Final Project</li>
+        <li>Quizz</li>
+        <li>Jogador</li>
+        <li>Escola</li>
+        <br>
+        <p>A tabela Projeto é utlizada na página <a href="{% url 'portfolio:projetos' %}">Projetos</a> para ser mais
+            fácil dar print das informações dos Projetos.</p>
+        <p>A tabela Cadeira é utlizada na página <a href="{% url 'portfolio:licenciatura' %}">Licenciatura</a> para ser mais
+            fácil dar print das informações das cadeiras que tive e vou ter durante a minha licenciatura.</p>
+        <p>A tabela Professor é utlizada na página <a href="{% url 'portfolio:licenciatura' %}">Licenciatura</a> e
+            <a href="{% url 'portfolio:tcf' %}">Projetos Finais</a> para ser mais fácil escolher um professor.</p>
+        <p>A tabela Final Project é utlizada na página <a href="{% url 'portfolio:tcf' %}">Projetos Finais</a> para ser mais
+            fácil dar print das informações dos projetos finais que tive interesse.</p>
+        <p>A tabela Escola é utlizada na página <a href="{% url 'portfolio:escolas' %}">Escolas</a> para ser mais
+            fácil dar print das informações das escolas que frequentei.</p>
+        <p>As tabelas Quizz e Jogador são utilizadas na página <a href="{% url 'portfolio:quiz' %}">Quiz</a> para ser
+            guardar informações das respostas e do utilizador que respondeu, bem como da sua pontuação.</p>
+    </div>
+    <br><br><br><br>
+
+    <div class="h1-div">
+        <h1>TECNOLOGIAS UTILIZADAS</h1>
+    </div>
+    <div class="ano-curricular">
+        {% for tecnologia in tecnologias %}
+            <div class="cadeira-css">
+                <h3>{{ tecnologia.nome }}</h3>
+                <p><b>Criador:</b> {{ tecnologia.criador }}</p>
+                <br>
+                <p><b>Descrição:</b> {{ tecnologia.descricao }}</p>
+                <br>
+                <p><a href="{{ tecnologia.pagina }}">Página da Wikipedia</a></p>
+            </div>
+            <br>
+        {% endfor %}
+    </div>
+    <br><br><br>
+{% endblock %}

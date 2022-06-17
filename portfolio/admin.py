@@ -9,6 +9,7 @@ from .models import Publicacao
 from .models import Jogador
 from .models import Final_Project
 from .models import Quizz
+from .models import Tecnologia
 
 # Register your models here.
 
@@ -22,3 +23,4 @@ admin.site.register(Publicacao)
 admin.site.register(Jogador)
 admin.site.register(Final_Project)
 admin.site.register(Quizz)
+admin.site.register(Tecnologia)
