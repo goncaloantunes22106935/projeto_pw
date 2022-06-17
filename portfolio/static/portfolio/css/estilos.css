@@ -65,7 +65,7 @@ footer {
   width: 100%;
   height: 40px;
   color: white;
-  background: url("../images/fundo.jpg");
+  background-color: #051E67;
   background-position: bottom;
 }
 
@@ -145,7 +145,7 @@ footer {
 
 
 .hero-image{
-  background-image: url("../images/superman.png");
+  background-image: url("../images/background.jpg");
   height: 85vh;
   background-repeat: no-repeat;
   background-size: cover;
@@ -158,7 +158,7 @@ footer {
 }
 
 .hero-image article{
-  background-color: rgba(255,255,255,.8);
+  background-color: rgba(255,255,255,.45);
   border-radius: 12px;
   text-align: center;
   max-width: 1200px;
